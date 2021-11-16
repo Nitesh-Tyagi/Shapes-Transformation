@@ -1,0 +1,72 @@
+body {
+  background-color: #222;
+}
+#shape{
+	background-color: #eac243; 
+	color: white;
+	width: 400px; 
+	height: 400px;
+	margin-left: 35.5%;
+	clip-path: polygon( 200px 200px,200px 200px, 200px 200px,200px 200px);
+	transition: all 3s ease-in-out 5s;
+}
+#square{
+	margin-left: 18.5%;
+	margin-right: 10%;
+	background-color: #555;
+	height: 150px;
+  	width: 150px;
+  	transition: all 1s ease-in-out 0s;
+}
+#triangle{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 0;
+	height: 0;
+	border-left: 75px solid transparent;
+	border-right: 75px solid transparent;
+	border-bottom: 150px solid #555;
+	transition: all 1s ease-in-out 0s;
+}
+#circle{
+	margin-left: 10%;
+	/*margin-right: 15%;*/
+	background-color: #555;
+	height: 150px;
+  	width: 150px;
+  	border-radius:  50%;
+  	transition: all 1s ease-in-out 0s;
+}
+.button{
+	display: inline-block;
+	width: 20%;
+    zoom: 1;
+    text-orientation: 15px;
+}
+#square:hover{
+    transform: scale(110%);
+    background-color: #333;
+}
+#triangle:hover{
+    transform: scale(110%);
+	border-bottom: 150px solid #333;
+}
+#circle:hover{
+    transform: scale(110%);
+    background-color: #333;
+}
+
+#square:hover ~ #shape {
+    clip-path: polygon(0 0, 400px 0, 400px 400px, 0 400px);
+    transition: all 3s ease-in-out 0s;
+}
+#triangle:hover ~ #shape {
+    clip-path: polygon(200px 0, 200px 0, 400px 400px, 0 400px);
+    transition: all 3s ease-in-out 0s;
+}
+#circle:hover ~ #shape {
+    clip-path: polygon(0 0, 400px 0, 400px 400px, 0 400px);
+    border-radius: 50%;
+    transition: all 3s ease-in-out 0s;
+    
+}
